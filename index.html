@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bandaru Prabha Supriya - Portfolio</title>
+  <style>
+    :root {
+      --bg-light: #f0f4f8;
+      --bg-dark: #1e1e1e;
+      --text-light: #333;
+      --text-dark: #f0f0f0;
+      --primary: #6a11cb;
+      --secondary: #2575fc;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-light);
+      transition: all 0.3s ease;
+    }
+
+    body.dark-mode {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      background: linear-gradient(to right, var(--secondary), var(--primary));
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    h2 {
+      color: var(--primary);
+    }
+
+    .projects, .certificates, .skills, .profiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    a.button {
+      background: var(--secondary);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .profile-img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin: 20px auto;
+      display: block;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background: var(--primary);
+      color: white;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-btn" onclick="toggleMode()">Toggle Light/Dark Mode</button>
+  <header>
+    <img src="IMG-20250211-WA0014.jpg" alt="Profile Photo" class="profile-img">
+    <h1>Bandaru Prabha Supriya</h1>
+    <p>AI & ML Student | Enthusiastic Developer | Certified Learner</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#profiles">Coding Profiles</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am Bandaru Prabha Supriya, currently pursuing B.Tech in Artificial Intelligence & Machine Learning at Aditya Engineering College. I'm passionate about coding, smart innovations, and real-world problem-solving. I enjoy learning new technologies and have actively participated in projects and online certifications to sharpen my skills.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card">
+        <ul>
+          <li>C Programming</li>
+          <li>Java</li>
+          <li>Python</li>
+          <li>MySQL</li>
+          <li>DBMS</li>
+          <li>Data Structures & Algorithms (DSA)</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>ML Project @ 1Stop.ai</h3>
+        <p>Worked on real-world machine learning applications using Python and relevant libraries.</p>
+      </div>
+      <div class="card">
+        <h3>Scenic Web Design</h3>
+        <p>Created a beautiful animated scene using HTML and CSS, showcasing creativity in frontend design.</p>
+      </div>
+      <div class="card">
+        <h3>Calculator App</h3>
+        <p>Developed a basic calculator with real-time display using HTML, CSS, and JavaScript.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificates">
+    <h2>Certifications</h2>
+    <div class="certificates">
+      <div class="card">
+        <h3>HackerRank</h3>
+        <ul>
+          <li>Python - 5 Star Badge</li>
+          <li>C - 5 Star Badge</li>
+          <li>Java - 5 Star Badge</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>NPTEL</h3>
+        <ul>
+          <li>Artificial Intelligence</li>
+          <li>Database Management System</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Other Platforms</h3>
+        <ul>
+          <li>Udemy</li>
+          <li>HP Life</li>
+          <li>Unstop (multiple badges)</li>
+          <li>Naukri</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Academic Merits</h3>
+        <p>Received Merit Certificates for outstanding performance in all 4 semesters of B.Tech.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="profiles">
+    <h2>Coding Profiles</h2>
+    <div class="profiles">
+      <div class="card">
+        <h3>CodeChef</h3>
+        <p>800+ problems solved</p>
+        <a href="https://www.codechef.com/users/supriya_76" target="_blank">Visit CodeChef</a>
+      </div>
+      <div class="card">
+        <h3>HackerRank</h3>
+        <p>5-star badges in C, Python, Java</p>
+        <a href="https://www.hackerrank.com/profile/23A91A6106" target="_blank">Visit HackerRank</a>
+      </div>
+      <div class="card">
+        <h3>LeetCode</h3>
+        <a href="https://leetcode.com/u/Bandarusupriya/" target="_blank">Visit LeetCode</a>
+      </div>
+      <div class="card">
+        <h3>GeeksforGeeks</h3>
+        <p>Actively solving and learning from DSA problems.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:prabhasupriya.b@gmail.com">prabhasupriya.b@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/prabha-supriya-bandaru-902a55299" target="_blank">Connect with me</a></p>
+    <a href="Prabha_Supriya_Resume.pdf" class="button" download>Download Resume</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Bandaru Prabha Supriya. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
